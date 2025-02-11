@@ -6,6 +6,10 @@ app.listen(3000,()=>{
     console.log(`Server is running on http://localhost:3000`)
 })
 
+app.get('/',(req,res)=>{
+    res.send("Working")
+})
+
 app.post('/signup',(req,res)=>{
     const {username,email,password,dob}=req.body
 
